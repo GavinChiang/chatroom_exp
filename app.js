@@ -12,17 +12,17 @@ io.on('connection', function(socket) {
     console.log('someone is comming!!');
 
     //new user enter
-    socket.on('new user', function(name) {
-        // socket.username = name;
-        console.log(name + " log in");
-        // io.emit('new user', { username: socket.username });
+    socket.on('new user', function(msg) {
+        socket.username = msg;
+        console.log(msg + " log in");
+        io.emit('new user', { username:socket.username });
     });
 
     //message event
     socket.on('chat message', function(msg) {
         console.log(socket.username + " : " + msg);
-        // io.emit('chat message', { username: socket.name, msg: msg });
-        io.emit('chat message', msg);
+        io.emit('chat message', { username:socket.username, msg:msg });
+        // io.emit('chat message', msg);
     });
 
     //someone leave
@@ -30,10 +30,8 @@ io.on('connection', function(socket) {
     socket.on('disconnect', function() {
         console.log(socket.username + " left");
 
-        // io.emit('user left', { username: socket.name });
+        io.emit('user left', { username:socket.name });
     });
-
-
 });
 
 
