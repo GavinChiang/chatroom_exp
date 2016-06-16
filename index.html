@@ -72,7 +72,12 @@
 
         socket.on('new user', function(data) {
             // appendMessage(data.username + "已加入");
-            $('#messages').append($('<li>').text(data.username + "已加入"));
+            $('#messages').append($('<li>').text(data.username + " joined"));
+        });
+
+        socket.on('user left', function(data) {
+            // appendMessage(data.username + "已加入");
+            $('#messages').append($('<li>').text(data.username + " left"));
         });
         //listen to msg
 

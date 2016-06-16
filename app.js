@@ -30,12 +30,13 @@ io.on('connection', function(socket) {
     socket.on('disconnect', function() {
         console.log(socket.username + " left");
 
-        io.emit('user left', { username:socket.name });
+        io.emit('user left', { username:socket.username });
     });
 });
 
+var port = Number(process.env.PORT || 3000)
 
 //assign port 
-http.listen(3000, function() {
+http.listen(port, function() {
     console.log('listening on *:3000');
 });

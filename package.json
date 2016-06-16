@@ -1,6 +1,23 @@
 {
-  "name": "socket-chatroom_exp",
+  "name": "chatroom_exp",
   "version": "0.0.1",
   "description": "my first socket.io app",
-  "dependencies": {}
+  "dependencies": {},
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GavinChiang/chatroom_exp.git"
+  },
+  "keywords": [
+    "chatroom"
+  ],
+  "author": "gavin chiang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/GavinChiang/chatroom_exp/issues"
+  },
+  "homepage": "https://github.com/GavinChiang/chatroom_exp#readme"
 }
