@@ -63,12 +63,16 @@
     <script>
     var socket = io();
 
-    $(function() {
+    $(document).ready(function() {
 
         var name = prompt("enter your name", "guest");
 
         //name to server
         socket.emit('new user', name);
+
+        if (name == "" || name== null){
+           name = "guest";
+        }
 
         socket.on('new user', function(data) {
             // appendMessage(data.username + "已加入");
