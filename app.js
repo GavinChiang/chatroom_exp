@@ -38,5 +38,5 @@ var port = Number(process.env.PORT || 3000)
 
 //assign port 
 http.listen(port, function() {
-    console.log('listening on *:3000');
+    console.log('listening on port!!');
 });
