@@ -34,7 +34,8 @@ io.on('connection', function(socket) {
     });
 });
 
+var port = process.env.PORT || 3000;
 //assign port 
-http.listen(process.env.PORT || 3000, function() {
-    console.log('listening on port!!');
+http.listen(port, function() {
+    console.log('listening on port ' + port + '!!' );
 });
